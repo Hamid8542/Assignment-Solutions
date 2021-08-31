@@ -1,4 +1,27 @@
-Programming homeworks
+w1d1 Selection and Repetition in JavaScript - Assignment @Abdulhamid Ibrahim
+
+CS305 Object Oriented and Functional Programming in JavaScript
+
+First do the readings and complete the following tasks from The JavaScript Language book. Try to
+complete the answers before looking at the solutions.
+
+JavaScript Fundamentals chapter
+
+Variables
+   • Giving the right name
+   • Uppercase const
+Basic operators, maths
+• The postfix and prefix forms
+• Assignment result
+• Type conversions
+• Fix the addition
+Comparisons
+• Comparisons
+Logical operators
+• Do all 9 Tasks in this section
+Loops: while and for
+• Do all 7 Tasks in this section
+
 
 1. Write a program to compute sales commission based on following rules:
   • If the salesman is salaried then
@@ -17,23 +40,20 @@ if(salaried === "yes"){
   if(sales < 300){
       console.log("No commision, Sorry")
   }
-  else if(sales <= 500){
+  else if(sales < 500){
       console.log(" 1 % commision " , .01 * sales);
   }
   else (sales > 500)
-    console.log(" 2% commision " , .02 * sales);
+    console.log(" 3% commision " , .02 * sales);
   }
 
 else{
     if(sales < 300){
         console.log("No commision, Sorry")
     }
-    else if(sales <= 500){
-        console.log(" 2 % commision " , .02 * sales);
-    }
-    else (sales > 500)
-    console.log(" 3% commision " , .03 * sales);
-  }
+    else(sales > 500)
+        console.log(" 2 % commision " , .03 * sales);
+
 }
 
 
