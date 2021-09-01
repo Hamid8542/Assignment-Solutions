@@ -47,8 +47,8 @@ console.log("expect 0: ", computeSalesCommission(true, 200));
 console.log("expect 0: ", computeSalesCommission(false, 200));
 console.log("expect 3: ", computeSalesCommission(true, 300));
 console.log("expect 6: ", computeSalesCommission(false, 300));
-console.log("expect 65: ", computeSalesCommission(true, 3500));
-console.log("expect 100: ", computeSalesCommission(false, 3500));
+console.log("expect 65: ", computeSalesCommission(true, 3500));  // 70
+console.log("expect 100: ", computeSalesCommission(false, 3500)); // 105
 
 /*
 2. Make a defining table and function that will return the balance of a savings account that 
