@@ -16,8 +16,39 @@ console.log("expect 6: ", computeSalesCommission(false, 300));
 console.log("expect 65: ", computeSalesCommission(true, 3500));
 console.log("expect 100: ", computeSalesCommission(false, 3500));
 */
+//let commision;
+function computeSalesCommission(salaried,sales){
+    let commision;
+if(salaried == true){
+  if(sales < 300){
+     return commision = 0;
+  }
+  else if(sales < 500){
+    return commision = .01 * sales;
+  }
+  else (sales > 500)
+    return commision = .02 * sales;
+  }
+   
+else{
+    if(sales < 300){
+      return commision = 0;
+    }
+    else if(sales < 500){
+      return commision = 0.02 * sales;
+    }
+    else if(sales > 500)
+      return commision = 0.03 * sales;
+}
 
-//function computeSaleCommission
+}
+
+console.log("expect 0: ", computeSalesCommission(true, 200));
+console.log("expect 0: ", computeSalesCommission(false, 200));
+console.log("expect 3: ", computeSalesCommission(true, 300));
+console.log("expect 6: ", computeSalesCommission(false, 300));
+console.log("expect 65: ", computeSalesCommission(true, 3500));
+console.log("expect 100: ", computeSalesCommission(false, 3500));
 
 /*
 2. Make a defining table and function that will return the balance of a savings account that 
@@ -44,22 +75,22 @@ console.log("expect 110.47", compoundInterest(100, 10, 1));
 console.log("expect 16470.09", compoundInterest(10000, 5, 10))
 
 
-/*
-3. Cost of House Down Payment 
-Make a defining table and then write a function that calculates down payment for a home loan based on 
-following rules. Your function should have a parameter for the cost and return the down payment 
-amount.
-Cost of House                                               Down Payment 
-$0 to less than 50K                                         5% of the cost
-$50K to less than 100K                                      $2500 + 10% of (cost - $50K)
-$100K to less than 200K                                     $7500 + 15% of (cost - $100K)
-$200K and above                                             $5000 + 10% of (cost - $200K)
+// /*
+// 3. Cost of House Down Payment 
+// Make a defining table and then write a function that calculates down payment for a home loan based on 
+// following rules. Your function should have a parameter for the cost and return the down payment 
+// amount.
+// Cost of House                                               Down Payment 
+// $0 to less than 50K                                         5% of the cost
+// $50K to less than 100K                                      $2500 + 10% of (cost - $50K)
+// $100K to less than 200K                                     $7500 + 15% of (cost - $100K)
+// $200K and above                                             $5000 + 10% of (cost - $200K)
 
-console.log("expect 2000: ", calcDownpayment(40000));
-console.log("expect 2500: ", calcDownpayment(50000));
-console.log("expect 7500: ", calcDownpayment(100000));
-console.log("expect 22500: ", calcDownpayment(200000));
-*/
+// console.log("expect 2000: ", calcDownpayment(40000));
+// console.log("expect 2500: ", calcDownpayment(50000));
+// console.log("expect 7500: ", calcDownpayment(100000));
+// console.log("expect 22500: ", calcDownpayment(200000));
+// */
 
 function calcDownpayment(houseCost){
     if(houseCost < 50000){
@@ -82,19 +113,15 @@ console.log("expect 2500: ", calcDownpayment(50000));
 console.log("expect 7500: ", calcDownpayment(100000));
 console.log("expect 10000: ", calcDownpayment(250000));
 
-/*
-4. Write functions sumDigits and multDigits that take an integer parameter and return the sum or 
-product of the digits in the number. Use the / and % operators to find the digits.
-     Input      sumDigits Output           multDigits Output
-      1234               10                        24
-      102                3                          0
-       8                 8                          8
-*/
+// /*
+// 4. Write functions sumDigits and multDigits that take an integer parameter and return the sum or 
+// product of the digits in the number. Use the / and % operators to find the digits.
+//      Input      sumDigits Output           multDigits Output
+//       1234               10                        24
+//       102                3                          0
+//        8                 8                          8
+// */
 
-
-// const prompt = require("prompt-sync")();
-// let num = prompt("Enter a number ? ");
-//let sum = 0 ;
 function sumDigits(num){
 let sum = 0; 
 while(num !== 0){
@@ -107,6 +134,8 @@ while(num !== 0){
 console.log(sumDigits(1234));
 console.log(sumDigits(102));
 console.log(sumDigits(8));
+
+//======================================================
 
 function multDigits(num){
     let mult = 1; 
@@ -121,15 +150,15 @@ function multDigits(num){
     console.log(multDigits(102));
     console.log(multDigits(8));
 
-/*
-5a. Write a function, convertFahrenheit, that takes an input parameter with a temperature in Fahrenheit 
-and returns the temperature in Celsius.
-console.log("expect 0: ", convertFahrenheit (32));
-console.log("expect -17.7778: ", convertFahrenheit (0));
-console.log("expect 100: ", convertFahrenheit (212));
-console.log("expect 37.7778: ", convertFahrenheit (100));
+// /*
+// 5a. Write a function, convertFahrenheit, that takes an input parameter with a temperature in Fahrenheit 
+// and returns the temperature in Celsius.
+// console.log("expect 0: ", convertFahrenheit (32));
+// console.log("expect -17.7778: ", convertFahrenheit (0));
+// console.log("expect 100: ", convertFahrenheit (212));
+// console.log("expect 37.7778: ", convertFahrenheit (100));
 
-*/
+// */
 
 function convertFahrenheit(Fahrenheit) {
   
@@ -150,7 +179,7 @@ console.log("expect 0: ", convertFahrenheit (-17.7778));
 console.log("expect 212: ", convertFahrenheit (100));
 console.log("expect 100: ", convertFahrenheit (37.7778));
 
-*/
+// */
 
 function convertCelcius(Celcius) {
   
@@ -162,19 +191,17 @@ function convertCelcius(Celcius) {
   console.log("expect 212: ", convertCelcius (100));
   console.log("expect 100: ", convertCelcius (37.7778))
   
-  /*
 
-/*
-6. Write a function that takes x and y co-ordinates of two points as inputs and returns the distance 
-   between these two points based on the formula, d = √( x 2 − x 1 ) 2 + ( y 2 − y 1 ) 2
-   console.log("expect 5 : ", calcDistance (0, 0, 5, 5));
- */
+// /*
+// 6. Write a function that takes x and y co-ordinates of two points as inputs and returns the distance 
+//    between these two points based on the formula, d = √( x 2 − x 1 ) 2 + ( y 2 − y 1 ) 2
+//    console.log("expect 5 : ", calcDistance (0, 0, 5, 5));
+//  */
 
     function CalcDistance(x1, y1, x2, y2){
     
-     let d = Math.sqrt((Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)));
-     return d;
-   // or
-   //return Math.sqrt(Math.pow(x2 - x1,2) + Math.pow(y2 -y1,2));
+     let distance = Math.sqrt((Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)));
+     return distance;
+   
    }
-   console.log("expecte 7.07 : ", CalcDistance(0,0,5,5));
+    console.log("expecte 7.07 : ", CalcDistance(0,0,5,5));
