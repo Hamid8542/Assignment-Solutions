@@ -78,7 +78,7 @@ const anualInterestRate = prompt("Enter annual interest rate :")
 const numberOfYears = prompt("Enter Number of years to Compound :")
 let monthlyRate = anualInterestRate / 12;
 monthlyRate = monthlyRate/100;
-const months = numberOfYears * 12;
+const months = numberOfYears * 12;  // converting years to months
 
 let balance = initialAmount;
 for(let i = 1; i < months; i++){
@@ -178,7 +178,7 @@ let sum = 0 ;
 while(num !== 0)
 {
     sum += num % 10;
-    num = num / 10;
+    num = parseInt(num / 10);
 }
-console.log(Math.floor(sum));
+console.log(sum);
 	  
