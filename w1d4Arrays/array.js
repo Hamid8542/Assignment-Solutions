@@ -157,8 +157,7 @@ const correctAnswers = [3, 1, 2, 4];
 scoreExams(studentAnswers, correctAnswers)); --> [3,2,3]
  */
 
-const correctAnswers = [3, 1, 2,4];
-   //= [[1, 1, 2,4], [2, 1, 2,2], [3, 1, 3,4]];                                                                                                                                    
+const correctAnswers = [3, 1, 2,4];                                                                                                                                    
 function scoreExams(arr){
      let result =[];
      for(let i =0; i<arr.length; i++){
