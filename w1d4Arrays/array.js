@@ -157,19 +157,23 @@ const correctAnswers = [3, 1, 2, 4];
 scoreExams(studentAnswers, correctAnswers)); --> [3,2,3]
  */
 
-function scoreExams(studentAnswers, correctAnswers){
-    correctAnswers = [3, 1, 2, 4];
-    let score = [];
-    for(let eachElement of studentAnswers){
-        console.log(eachElement);
-        for(let innerElement of eachElement){
-            if(innerElement === correctAnswers){
-                score++;
-            }
-        }
-   }
-   return score;
+const correctAnswers = [3, 1, 2,4];
+   //= [[1, 1, 2,4], [2, 1, 2,2], [3, 1, 3,4]];                                                                                                                                    
+function scoreExams(arr){
+     let result =[];
+     for(let i =0; i<arr.length; i++){
+        let count = 0;
+         for(let j=0; j<arr[i].length; j++){
+             
+             if(arr[i][j] === correctAnswers[j]){
+                 count++;
+             }
+             
+         }
+         result.push(count);
+     }
+     return result;
 }
-
-console.log("Expected [3,2,0] :", scoreExams([[1, 1, 2, 4], [2, 1, 2, 2], [1, 2, 3, 1]], [3, 1, 2, 4]));
-console.log("Expected [3,2,4] :", scoreExams( [[1, 1, 2, 4], [2, 1, 2, 2],[3, 1, 2, 4]], [3, 1, 2, 4]));
+console.log("Expected result [3,2,3]: ", scoreExams([[1, 1, 2, 4], [2, 1, 2, 2], [3, 1, 3, 4]], [3, 1, 2, 4]));
+console.log("Expected result [3,2,0] :", scoreExams([[1, 1, 2, 4], [2, 1, 2, 2], [1, 2, 3, 1]], [3, 1, 2, 4]));
+console.log("Expected result [3,2,4]: ", scoreExams([[1, 1, 2, 4], [2, 1, 2, 2], [3, 1, 3, 4]], [3, 1, 2, 4]));
