@@ -24,26 +24,26 @@ console.log("Expected Result 10 :",double(5));
 the function applied to each element of the input array. Use your myMap function with your 
 double and times100 functions.
 */
- function myMap(array, doub, times) {
-     
-    console.log(doub(array));
-    console.log(times(array));
-}
-  
+  function myMap(array, doub, times) {
+    doub(array);
+    times(array);
+ }  
    function double(array){
+    
         for(let i = 0; i < array.length; i++){
             array[i] *= 2 ;
    }
-        return array;
+        return console.log(array);
 }
     function times100(array){
+       
         for(let i = 0; i < array.length; i++){
             array[i] *= 100 ;
    }
-        return array;
+        return console.log(array);
 }
-   console.log("Expected output [4,8,12] ", myMap ( [2,4,6], double, times100)); 
-   console.log("Expected output [300,500,700]", myMap ( [3,5,7], double, times100)); 
+   console.log("Expected output [4,8,12], [400,800,1200]", myMap([2,4,6], double, times100)); 
+   console.log("Expected output [6,10,14],[600][1000][1400]", myMap([3,5,7], double, times100)); 
 
 //======================================================================================
 
