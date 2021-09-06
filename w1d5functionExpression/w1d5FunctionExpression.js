@@ -1,3 +1,4 @@
+module.exports = {double, times100 , myMap };
 /**
  * @Abdulhamid Ibrahim
  * @param {*} w1d5functionExpressions 
@@ -5,45 +6,65 @@
  */
 //1. Write a function, double, that takes a number and returns 2 times the number
 
-function double(num){
+function doublee(num){
  return 2*num;
 }
-console.log("Expected Result 10 :",double(5));
+console.log("Expected Result (2 * 10) 20 :",doublee(10));
+console.log("Expected Result (2 * 0) 0 :",doublee(0));
+console.log("Expected Result (2 * -10) -20 :",doublee(-10));
 
 //====================================================================================
+// function double(array){
+//      let newArray = [];
+//     for(let i = 0; i < array.length; i++){
+//     newArray.push(array[i] * 2);
+//    }
+//    return newArray;
+// }
+//    console.log("Expected Result [4,8,12] :", double([2,4,6]));
+
 
 //  2. Write a function times100 that takes a number and returns 100 times the number.
  
- function times100(num1){
-     return 100 * num1;
+function timess100(number){
+     return number * 100;
  }
- console.log("Expected Result 500 :",times100(5));
+ console.log("Expected Result (100 * 10) 1000 :",timess100(10));
+ console.log("Expected Result (100 * 0) 0 :",timess100(0));
+ console.log("Expected Result (100 * -10) -1000 :",timess100(-10));
 //=====================================================================================
 /*
 3. Write a function, myMap, that takes an array and a function and returns a new array that has 
 the function applied to each element of the input array. Use your myMap function with your 
 double and times100 functions.
 */
-  function myMap(array, doub, times) {
-    doub(array);
-    times(array);
- }  
-   function double(array){
-    
+ function myMap(array, double) {
+     double();
+     return array;
+}
+
+console.log("Expected output will be  [-20,0,20,40] ", myMap([-10,0,10,20], double)); 
+   
+function double(array){
         for(let i = 0; i < array.length; i++){
             array[i] *= 2 ;
    }
-        return console.log(array);
+        return array;
 }
+
+function myMap(array, times100){
+    times100(array);
+      return array;
+}
+
     function times100(array){
-       
         for(let i = 0; i < array.length; i++){
             array[i] *= 100 ;
    }
-        return console.log(array);
+        return array;
 }
-   console.log("Expected output [4,8,12], [400,800,1200]", myMap([2,4,6], double, times100)); 
-   console.log("Expected output [6,10,14],[600][1000][1400]", myMap([3,5,7], double, times100)); 
+  console.log("Expected output will be  [-20,0,20,40] ", myMap([-10,0,10,20], double)); 
+  console.log("Expected output [-1000,0,1000,2000]", myMap([-10,0,10,20], times100)); 
 
 //======================================================================================
 
@@ -59,17 +80,18 @@ let triples = function (array) {
    }
      return array;
 }
-   console.log("Expected value [6,12,16]", triples( [2,4,6]));
+    console.log("Expected value [-3,0,30,60]", triples( [-1,0,10,20]));
   
 //==============================================================
 
 //Using Arrow Function
 
-let triples = (array) => {
+let triples1 = (array) => {
 for(let i = 0; i < array.length; i++){
         array[i] *= 3 ;
 }
      return array;
  } ;
- console.log("Expected value [6,12,16]", triples( [2,4,6]));
+
+ console.log("Expected value [-3,0,30,60]", triples1( [-1,0,10,20]));
 
